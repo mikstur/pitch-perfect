@@ -9,7 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // Outlets connected to storyboard
+    @IBOutlet weak var btnMicrophone: UIButton!
+    @IBOutlet weak var lblRecording: UILabel!
+    @IBOutlet weak var btnStop: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +25,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func startRecordingAudio(sender: UIButton) {
+        
+    }
 
+    @IBAction func stopRecordingAudio(sender: UIButton) {
+        
+    }
 }
 
