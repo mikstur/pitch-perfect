@@ -57,8 +57,6 @@ class RecordViewController: UIViewController {
     }
 
     @IBAction func stopRecordingAudio(sender: UIButton) {
-        defaultUIState()
-        
         audioRecorderManager.stopRecording()
     }
 }
@@ -66,6 +64,8 @@ class RecordViewController: UIViewController {
 extension RecordViewController: AVAudioRecorderDelegate {
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
+        defaultUIState()
+        
         if (flag) {
             recordedAudio = RecordedAudio()
             recordedAudio.URL = recorder.url
